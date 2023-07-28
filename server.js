@@ -14,7 +14,8 @@ async function main() {
 
     app.get('/listBooks', async (req, res) => {
         let books = await loadBooks()
-        res.json(books);
+       res.json(books);
+       res.send('400')
     })
 
     app.patch('/updateBook', async (req, res) => {
